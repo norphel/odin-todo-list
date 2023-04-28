@@ -5,9 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
-    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="../src/styles/styles.css">
+    <!-- <script src="./main.js" defer></script> -->
 </head>
 <body>
-    
+    <header>
+        <h1 class="logo">TODOOS</h1>
+    </header>
+    <main>
+        <div class="menus">
+            <div class="tasksLists">
+                <div>
+                    <img src="../src/assets/icons/tasks.svg" alt="all tasks icon">
+                    <span>All tasks</span>
+                </div>
+                <div>
+                    <img src="../src/assets/icons/today.svg" alt="tasks due today icon">
+                    <span>Today</span>
+                </div>
+                <div>
+                    <img src="../src/assets/icons/week.svg" alt="tasks due this week icon">
+                    <span>This Week</span>
+                </div>
+            </div>
+            <div class="project">
+                <div class="active">
+                    <img src="../src/assets/icons/project.svg" alt="projects icon">
+                    <span>Projects</span>
+                </div>
+            </div>
+        </div>
+        <div class="projectContainer">
+        </div>
+    </main>
 </body>
 </html>
