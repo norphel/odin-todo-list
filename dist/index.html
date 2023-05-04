@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
-    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="../src/styles/styles.css">
-    <!-- <script src="./main.js" defer></script> -->
+    <script src="./main.js" defer></script>
 </head>
 <body>
     <header>
@@ -36,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="projectContainer">
+        <div class="projectContainer">
             <div class="projectCard">
                 <p>Title</p>
                 <p>Write some description of the project here</p>
@@ -53,13 +51,13 @@
                 </div>
             </div>
 
-            <div class="addProject">
+            <div class="addProject" id="add-project-btn">
                 <img src="../src/assets/icons/addProject.svg" alt="add project button icon">
             </div>
-        </div> -->
+        </div>
 
 
-        <div class="tasksContainer">
+        <!-- <div class="tasksContainer">
             <h2>Project Name</h2>
             <div class="listHeader">
                 <span>Task</span>
@@ -104,7 +102,32 @@
                 <img src="../src/assets/icons/addTask.svg" alt="add a todo task icon">
             </div>
 
+        </div> -->
+
+        <div class="dialogue-box">
+            <h2>Add or Edit</h2>
+            <form>
+              <label for="title">Title:</label>
+              <input type="text" id="title" name="title" placeholder="Title" required>
+              <label for="description">Description:</label>
+              <textarea id="description" name="description" placeholder="Description (max 100 characters)" maxlength="100" cols="30" rows="5" required></textarea>
+              <label for="priority">Priority:</label>
+              <div id="priority">
+                <label><input type="radio" name="priority" value="low">Low</label>
+                <label><input type="radio" name="priority" value="medium">Medium</label>
+                <label><input type="radio" name="priority" value="high">High</label>
+              </div>
+              <label for="due-date">Due Date:</label>
+              <input type="date" id="due-date" name="due-date" required>
+              <div class="buttons">
+                <button type="submit" name="done">Done</button>
+                <button type="button" name="cancel">Cancel</button>
+              </div>
+            </form>
         </div>
+        
+        <div class="overlay"></div>
+
     </main>
 </body>
 </html>
