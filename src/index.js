@@ -12,11 +12,11 @@ const overlay = document.querySelector('.overlay');
 const cancelBtn = dialogueBox.querySelector('.btn-cancel');
 
 addProjectBtn.addEventListener('click', () => {
-  dialogueBox.classList.add('active');
-  overlay.classList.add('active');
+  dialogueBox.style.display = 'block';
+  overlay.style.display = 'block';
 });
 
 cancelBtn.addEventListener('click', () => {
-  dialogueBox.classList.remove('active');
-  overlay.classList.remove('active');
+  dialogueBox.style.display = 'none';
+  overlay.style.display = 'none';
 });
