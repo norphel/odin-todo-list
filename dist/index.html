@@ -34,6 +34,7 @@
                 </div>
             </div>
         </div>
+
         <div class="projectContainer">
             <div class="projectCard">
                 <p>Title</p>
@@ -55,7 +56,6 @@
                 <img src="../src/assets/icons/addProject.svg" alt="add project button icon">
             </div>
         </div>
-
 
         <!-- <div class="tasksContainer">
             <h2>Project Name</h2>
@@ -103,31 +103,43 @@
             </div>
 
         </div> -->
-
-        <div class="dialogue-box">
-            <h2>Add or Edit</h2>
-            <form>
-              <label for="title">Title:</label>
-              <input type="text" id="title" name="title" placeholder="Title" required>
-              <label for="description">Description:</label>
-              <textarea id="description" name="description" placeholder="Description (max 100 characters)" maxlength="100" cols="30" rows="5" required></textarea>
-              <label for="priority">Priority:</label>
-              <div id="priority">
-                <label><input type="radio" name="priority" value="low">Low</label>
-                <label><input type="radio" name="priority" value="medium">Medium</label>
-                <label><input type="radio" name="priority" value="high">High</label>
-              </div>
-              <label for="due-date">Due Date:</label>
-              <input type="date" id="due-date" name="due-date" required>
-              <div class="buttons">
-                <button type="submit" name="done">Done</button>
-                <button type="button" name="cancel">Cancel</button>
-              </div>
-            </form>
-        </div>
-        
-        <div class="overlay"></div>
-
     </main>
+
+    <div class="dialogue-box">
+        <h2>Add or Edit</h2>
+        <form action="./index.html">
+            <label for="title">Title <span>*</span>
+                <input type="text" id="title" name="title" placeholder="Eg. Feed the neighbor's cats" required>
+            </label>
+            <label for="description">Description (max 100 characters)
+                <textarea id="description" name="description" placeholder="" maxlength="100" cols="30" rows="5">1 scoop of cat food each</textarea>
+            </label>
+            <label for="priority">Priority <span>*</span>
+                <div id="priority">
+                    <label for="lowPriority">
+                        <input type="radio" name="priority" value="low" checked>
+                        Low
+                    </label>
+                    <label for="mediumPriority">
+                        <input type="radio" name="priority" value="medium">
+                        Medium
+                    </label>
+                    <label for="highPriority">
+                        <input type="radio" name="priority" value="high">
+                        High
+                    </label>
+                </div>
+            </label>
+            <label for="due-date">Due Date <span>*</span>
+                <input type="date" id="due-date" name="due-date" required>
+            </label>
+            <div class="buttons">
+                <button type="submit" name="done">Done</button>
+                <button type="button" name="cancel" class="btn-cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="overlay"></div>
 </body>
 </html>
