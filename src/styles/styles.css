@@ -55,7 +55,7 @@ nav > div > p.active {
 
 main {
     flex-grow: 1;
-    padding: 0 2rem 1rem 2rem;
+    padding: 1rem 2rem;
     display: flex;
 }
 .projectContainer {
@@ -112,6 +112,7 @@ form button:hover {
     text-align: center;
     font-size: 1.2rem;
     margin: 0;
+    cursor: pointer;
 }
 .projectCard > div {
     display: flex;
@@ -125,6 +126,7 @@ form button:hover {
     display: flex;
     gap: 1rem;
     align-items: center;
+    cursor: pointer;
 }
 .actions > img {
     width: 1rem;
@@ -132,20 +134,32 @@ form button:hover {
 }
 
 .tasksContainer {
-    padding: 2rem 4rem 7rem 4rem;
+    color: #FFFFFF;
+    padding: 0rem 4rem 7rem 4rem;
     position: relative;
+    flex-grow: 1;
+}
+@media (max-width: 768px) {
+    .tasksContainer {
+        padding: 0;
+        padding-bottom: 7rem;
+    }
 }
 .tasksContainer h2 {
     text-align: center;
+    margin-top: 0;
+}
+.listHeader {
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 .listHeader,
 .task {
     display: grid;
-    grid-template-columns: 3fr repeat(3, 1fr);
+    grid-template-columns: 3fr 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
 }
-.listHeader > span:first-child,
 .task > div:first-child {
     justify-self: start;
     padding-left: 1rem;
