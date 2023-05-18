@@ -1,123 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
-    <script src="./main.js" defer></script>
-</head>
-<body>
-    <header>
-        <h1 class="logo">TODOOS</h1>
-    </header>
-    <main>
-        <div class="menus">
-            <div class="tasksLists">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo App</title>
+        <script src="./main.js" defer></script>
+        <!-- <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+        <link rel="stylesheet" href="../src/styles/styles.css"> -->
+    </head>
+    <body>
+        <header>
+            <h1 class="logo">TODOOS</h1>
+            <nav>
                 <div>
-                    <img src="../src/assets/icons/tasks.svg" alt="all tasks icon">
-                    <span>All tasks</span>
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.3913 21H42" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M2 21L5.47826 25L12.4348 17" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M19.3913 5H42" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M2 5L5.47826 9L12.4348 1" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M19.3913 37H42" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+                        <path d="M2 37L5.47826 41L12.4348 33" stroke="white" stroke-width="3" stroke-miterlimit="10"/>
+                    </svg>
+                    <p>All tasks</p>
                 </div>
                 <div>
-                    <img src="../src/assets/icons/today.svg" alt="tasks due today icon">
-                    <span>Today</span>
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M41 16.5556V9.88889C41 7.43429 38.7615 5.44444 36 5.44444H6C3.23857 5.44444 1 7.43429 1 9.88889V16.5556M41 16.5556V36.5556C41 39.0102 38.7615 41 36 41H6C3.23857 41 1 39.0102 1 36.5556V16.5556M41 16.5556H1M11 1V9.88889M31 1C31 1 31 6.41756 31 9.88889" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M9.2 21H6.8C6.35817 21 6 21.3582 6 21.8V24.2C6 24.6418 6.35817 25 6.8 25H9.2C9.64183 25 10 24.6418 10 24.2V21.8C10 21.3582 9.64183 21 9.2 21Z" fill="white"/>
+                    </svg>
+                    <p>Today</p>
                 </div>
                 <div>
-                    <img src="../src/assets/icons/week.svg" alt="tasks due this week icon">
-                    <span>This Week</span>
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 14.3333H41M1 14.3333V33.8893C1 36.3784 1 37.6224 1.54497 38.5731C2.02432 39.4093 2.78868 40.09 3.7295 40.516C4.798 41 6.19747 41 8.99227 41H33.0078C35.8025 41 37.2 41 38.2685 40.516C39.2093 40.09 39.9762 39.4093 40.4555 38.5731C41 37.6233 41 36.3811 41 33.8969V14.3333M1 14.3333V12.556C1 10.0669 1 8.82138 1.54497 7.87067C2.02432 7.03438 2.78868 6.35496 3.7295 5.92887C4.79905 5.44444 6.20023 5.44444 9.0005 5.44444H11M41 14.3333V12.5487C41 10.0644 41 8.82045 40.4555 7.87067C39.9762 7.03438 39.2093 6.35496 38.2685 5.92887C37.199 5.44444 35.8007 5.44444 33.0005 5.44444H31M11 5.44444H31M11 5.44444V1M31 5.44444V1M31 23.2222H11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p>This Week</p>
                 </div>
-            </div>
-            <div class="project">
                 <div class="active">
-                    <img src="../src/assets/icons/project.svg" alt="projects icon">
-                    <span>Projects</span>
+                    <svg width="42" height="42" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35.3636 5.55556V6.55556H36.3636H49V49H1V6.55556H13.6364H14.6364V5.55556V1H35.3636V5.55556ZM15.9091 1.77778H14.9091V2.77778V5.55556V6.55556H15.9091H34.0909H35.0909V5.55556V2.77778V1.77778H34.0909H15.9091ZM47.7273 48.2222H48.7273V47.2222V19.4444V18.4444H47.7273H2.27273H1.27273V19.4444V47.2222V48.2222H2.27273H47.7273ZM47.7273 17.6667H48.7273V16.6667V8.33333V7.33333H47.7273H2.27273H1.27273V8.33333V16.6667V17.6667H2.27273H47.7273Z" fill="black" stroke="white" stroke-width="2"/>
+                    </svg>
+                    <p>Project</p>
                 </div>
-            </div>
+            </nav>
+        </header>
+        <main>
+            <!-- <div class="tasksContainer">
+                <h2>Project Name</h2>
+                <div class="listHeader">
+                    <span>Task</span>
+                    <span>Priority</span>
+                    <span>Due date</span>
+                    <span>Actions</span>
+                </div>
+                <hr>
+                <div class="task">
+                    <div class="about">
+                        <h3>Do something</h3>
+                        <p>Description of do something task can be seen here haha... I don't know whether this style looks good</p>
+                    </div>
+                    <div class="priority">
+                        <img src="../src/assets/icons/highPriority.svg" alt="high priority icon">
+                    </div>
+                    <div class="dueDate">dd/mm/yyyy</div>
+                    <div class="actions">
+                        <img src="../src/assets/icons/checkbox.svg" alt="project complete checkbox">
+                        <img src="../src/assets/icons/delete.svg" alt="delete project icon">
+                        <img src="../src/assets/icons/edit.svg" alt="edit project details icon">
+                    </div>
+                </div>
+                
+                <div class="task">
+                    <div class="about">
+                        <h3>Do something else</h3>
+                        <p>Description of do something else task.</p>
+                    </div>
+                    <div class="priority">
+                        <img src="../src/assets/icons/lowPriority.svg" alt="high priority icon">
+                    </div>
+                    <div class="dueDate">dd/mm/yyyy</div>
+                    <div class="actions">
+                        <img src="../src/assets/icons/checkbox.svg" alt="project complete checkbox">
+                        <img src="../src/assets/icons/delete.svg" alt="delete project icon">
+                        <img src="../src/assets/icons/edit.svg" alt="edit project details icon">
+                    </div>
+                </div>
+
+                <div class="addTask">
+                    <img src="../src/assets/icons/addTask.svg" alt="add a todo task icon">
+                </div>
+
+            </div> -->
+        </main>
+
+        <div class="dialogue-box">
+            <h2>Add or Edit</h2>
+            <form action="./index.html">
+                <label for="title">Title <span>*</span>
+                    <input type="text" id="title" name="title" placeholder="Eg. Feed the neighbor's cats" required>
+                </label>
+                <label for="description">Description (max 100 characters)
+                    <textarea id="description" name="description" placeholder="" maxlength="100" cols="30" rows="5">1 scoop of cat food each</textarea>
+                </label>
+                <label for="priority">Priority <span>*</span>
+                    <div id="priority">
+                        <label for="lowPriority">
+                            <input id="lowPriority" type="radio" name="priority" value="low" checked>
+                            Low
+                        </label>
+                        <label for="mediumPriority">
+                            <input id="mediumPriority" type="radio" name="priority" value="medium">
+                            Medium
+                        </label>
+                        <label for="highPriority">
+                            <input id="highPriority" type="radio" name="priority" value="high">
+                            High
+                        </label>
+                    </div>
+                </label>
+                <label for="due-date">Due Date <span>*</span>
+                    <input type="date" id="due-date" name="due-date" required>
+                </label>
+                <div class="buttons">
+                    <button type="submit" name="done">Done</button>
+                    <button type="button" name="cancel" class="btn-cancel">Cancel</button>
+                </div>
+            </form>
         </div>
-
-        <!-- <div class="tasksContainer">
-            <h2>Project Name</h2>
-            <div class="listHeader">
-                <span>Task</span>
-                <span>Priority</span>
-                <span>Due date</span>
-                <span>Actions</span>
-            </div>
-            <hr>
-            <div class="task">
-                <div class="about">
-                    <h3>Do something</h3>
-                    <p>Description of do something task can be seen here haha... I don't know whether this style looks good</p>
-                </div>
-                <div class="priority">
-                    <img src="../src/assets/icons/highPriority.svg" alt="high priority icon">
-                </div>
-                <div class="dueDate">dd/mm/yyyy</div>
-                <div class="actions">
-                    <img src="../src/assets/icons/checkbox.svg" alt="project complete checkbox">
-                    <img src="../src/assets/icons/delete.svg" alt="delete project icon">
-                    <img src="../src/assets/icons/edit.svg" alt="edit project details icon">
-                </div>
-            </div>
-            
-            <div class="task">
-                <div class="about">
-                    <h3>Do something else</h3>
-                    <p>Description of do something else task.</p>
-                </div>
-                <div class="priority">
-                    <img src="../src/assets/icons/lowPriority.svg" alt="high priority icon">
-                </div>
-                <div class="dueDate">dd/mm/yyyy</div>
-                <div class="actions">
-                    <img src="../src/assets/icons/checkbox.svg" alt="project complete checkbox">
-                    <img src="../src/assets/icons/delete.svg" alt="delete project icon">
-                    <img src="../src/assets/icons/edit.svg" alt="edit project details icon">
-                </div>
-            </div>
-
-            <div class="addTask">
-                <img src="../src/assets/icons/addTask.svg" alt="add a todo task icon">
-            </div>
-
-        </div> -->
-    </main>
-
-    <div class="dialogue-box">
-        <h2>Add or Edit</h2>
-        <form action="./index.html">
-            <label for="title">Title <span>*</span>
-                <input type="text" id="title" name="title" placeholder="Eg. Feed the neighbor's cats" required>
-            </label>
-            <label for="description">Description (max 100 characters)
-                <textarea id="description" name="description" placeholder="" maxlength="100" cols="30" rows="5">1 scoop of cat food each</textarea>
-            </label>
-            <label for="priority">Priority <span>*</span>
-                <div id="priority">
-                    <label for="lowPriority">
-                        <input type="radio" name="priority" value="low" checked>
-                        Low
-                    </label>
-                    <label for="mediumPriority">
-                        <input type="radio" name="priority" value="medium">
-                        Medium
-                    </label>
-                    <label for="highPriority">
-                        <input type="radio" name="priority" value="high">
-                        High
-                    </label>
-                </div>
-            </label>
-            <label for="due-date">Due Date <span>*</span>
-                <input type="date" id="due-date" name="due-date" required>
-            </label>
-            <div class="buttons">
-                <button type="submit" name="done">Done</button>
-                <button type="button" name="cancel" class="btn-cancel">Cancel</button>
-            </div>
-        </form>
-    </div>
-    
-    <div class="overlay"></div>
-</body>
+        
+        <div class="overlay"></div>
+    </body>
 </html>
