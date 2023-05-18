@@ -67,13 +67,13 @@ function createProjectCard(project) {
 }
 
 function renderProjectContainer() {
-    const main = document.getElementsByTagName(main);
+    const main = document.querySelector('main');
     const projectContainer = document.createElement('div');
     projectContainer.classList.add('projectContainer');
     
     const projects = getProjects();
-    for (const project in projects) {
-         const projectCard = createProjectCard(project);
+    for (let i = 0; i< projects.length; i++) {
+         const projectCard = createProjectCard(projects[i]);
          projectContainer.appendChild(projectCard);
     }
 
@@ -83,6 +83,7 @@ function renderProjectContainer() {
     const addProjectIcon = new Image();
     addProjectIcon.src = '/src/assets/icons/addProject.svg'
     addProjectIcon.alt = 'add project icon';
+    addProject.appendChild(addProjectIcon);
 
     addProject.addEventListener('click', openModal);
 
@@ -90,3 +91,5 @@ function renderProjectContainer() {
 
     main.appendChild(projectContainer);
 }
+
+export {renderProjectContainer};
