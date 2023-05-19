@@ -1,6 +1,6 @@
 import {getTasks} from '/src/getTasks.js';
-import { getPriorityIcon } from './getPriorityIcon';
-import { openModal } from './addProjectDetails';
+import { getPriorityIcon } from './getPriorityIcon.js';
+import { openModal } from './addProjectOrTask.js';
 
 function createTaskRow (task) {
     const taskRow = document.createElement('div');
@@ -78,7 +78,7 @@ function renderTasksContainer () {
 
     const addTask = document.createElement('div');
     addTask.classList.add('addTask');
-    addTask.setAttribute('id', 'add-task-btn');
+    addTask.setAttribute('id', 'add-btn');
     const addTaskIcon = new Image();
     addTaskIcon.src = '/src/assets/icons/addTask.svg'
     addTaskIcon.alt = 'add task icon';

@@ -50,14 +50,14 @@
 
         <div class="dialogue-box">
             <h2>Add or Edit</h2>
-            <form action="./index.html">
+            <form action="./index.html" class="form-element">
                 <label for="title">Title <span>*</span>
                     <input type="text" id="title" name="title" placeholder="Eg. Feed the neighbor's cats" required>
                 </label>
                 <label for="description">Description (max 100 characters)
                     <textarea id="description" name="description" placeholder="" maxlength="100" cols="30" rows="5">1 scoop of cat food each</textarea>
                 </label>
-                <label for="priority">Priority <span>*</span>
+                <label>Priority <span>*</span>
                     <div id="priority">
                         <label for="lowPriority">
                             <input id="lowPriority" type="radio" name="priority" value="low" checked>

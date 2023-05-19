@@ -1,10 +1,10 @@
 function openModal () {
-    const addProjectBtn = document.getElementById('add-project-btn');
+    const addBtn = document.getElementById('add-btn');
     const dialogueBox = document.querySelector('.dialogue-box');
     const overlay = document.querySelector('.overlay');
     const cancelBtn = dialogueBox.querySelector('.btn-cancel');
 
-    addProjectBtn.addEventListener('click', () => {
+    addBtn.addEventListener('click', () => {
     dialogueBox.style.display = 'block';
     overlay.style.display = 'block';
     });
