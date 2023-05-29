@@ -1,5 +1,4 @@
 import {getProjects} from './getProjects.js';
-import {openModal} from './addProjectOrTask.js';
 import {getPriorityIcon} from './getPriorityIcon.js';
 
 function createProjectCard(project) {
@@ -70,8 +69,6 @@ function renderProjectContainer() {
     addProjectIcon.src = '/src/assets/icons/addProject.svg'
     addProjectIcon.alt = 'add project icon';
     addProject.appendChild(addProjectIcon);
-
-    addProject.addEventListener('click', openModal);
 
     projectContainer.appendChild(addProject);
 

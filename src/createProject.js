@@ -1,4 +1,3 @@
-console.log('createProject module called!');
 class Projects {
     constructor () {
         this.projects = [];
@@ -46,7 +45,4 @@ function createProject (e) {
     console.log(myProjects);
 }
 
-const form = document.querySelector('.form-element');
-const doneButton = form.querySelector('button[name="done"]');
-
-doneButton.addEventListener('submit', createProject);
+export { myProjects, createProject };

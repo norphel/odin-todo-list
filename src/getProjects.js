@@ -1,6 +1,8 @@
 //temporarily hard-coded. Project details will be stored and retrieved from localStorage
+import { myProjects } from "./createProject";
 
 function getProjects () {
+    console.log(myProjects);
     return [
         {
             title: "Complete Todo List project",

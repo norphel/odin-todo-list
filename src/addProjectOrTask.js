@@ -1,8 +1,10 @@
-function openModal () {
+export function openModal () {
     const addBtn = document.getElementById('add-btn');
     const dialogueBox = document.querySelector('.dialogue-box');
     const overlay = document.querySelector('.overlay');
-    const cancelBtn = dialogueBox.querySelector('.btn-cancel');
+    const form = document.querySelector('.form-element');
+    const submitBtn = form.querySelector('button[type="submit"');
+    const cancelBtn = form.querySelector('.btn-cancel');
 
     addBtn.addEventListener('click', () => {
     dialogueBox.style.display = 'block';
@@ -14,5 +16,3 @@ function openModal () {
     overlay.style.display = 'none';
     });
 }
-
-export {openModal};
