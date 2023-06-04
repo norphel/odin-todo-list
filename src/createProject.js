@@ -25,7 +25,8 @@ class Project {
 }
 
 function createProject (e) {
-    console.log('createProject function called');
+    const dialogueBox = document.querySelector('.dialogue-box');
+    const overlay = document.querySelector('.overlay');
     e.preventDefault();
     const title = document.getElementById('title').value;
     const description = document.getElementById('description').value;
@@ -43,6 +44,8 @@ function createProject (e) {
 
     myProjects.addProject(project);
     console.log(myProjects);
+    dialogueBox.style.display = 'none';
+    overlay.style.display = 'none';
 }
 
 export { myProjects, createProject };

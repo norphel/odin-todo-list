@@ -3,7 +3,6 @@ export function openModal () {
     const dialogueBox = document.querySelector('.dialogue-box');
     const overlay = document.querySelector('.overlay');
     const form = document.querySelector('.form-element');
-    const submitBtn = form.querySelector('button[type="submit"');
     const cancelBtn = form.querySelector('.btn-cancel');
 
     addBtn.addEventListener('click', () => {
